@@ -26,7 +26,7 @@ const App: React.FC = () => {
         align="center"
         gutterBottom
       >
-        Taskify
+        Taskify App
       </Typography>
       <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <div>
