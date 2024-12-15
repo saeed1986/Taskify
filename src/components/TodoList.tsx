@@ -1,6 +1,6 @@
 import React from "react";
 import { Todo } from "../Todo";
-import { List, ListItem, ListItemText, Paper } from "@mui/material";
+import { List, Paper } from "@mui/material";
 import SingleTodo from "./SingleTodo";
 
 interface TodoListProps {
