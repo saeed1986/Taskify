@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { TextField, Button, Box } from "@mui/material"; // Importing MUI components
 
 interface InputFieldProps {
@@ -12,12 +12,20 @@ const InputField: React.FC<InputFieldProps> = ({
   setTodo,
   handleAdd,
 }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+
   return (
-    <form onSubmit={handleAdd}>
+    <form
+      onSubmit={(e) => {
+        handleAdd(e);
+        inputRef.current?.blur();
+      }}
+    >
       {" "}
       {/* Attach onSubmit to the form element */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <TextField
+          ref={inputRef}
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
           label="Enter a task"
