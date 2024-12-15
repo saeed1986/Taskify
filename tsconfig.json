@@ -1,18 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": false, // Make sure this is `false`
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx"
+    "target": "es6", // ECMAScript version to compile to
+    "lib": ["dom", "dom.iterable", "esnext"], // Include DOM types and modern JS features
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "strict": true, // Enable strict type-checking
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
+    "noEmit": true, // Don't stop TypeScript from emitting JavaScript files
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES modules
+    "module": "esnext", // Use latest ES module system
+    "moduleResolution": "node", // Use Node module resolution strategy
+    "resolveJsonModule": true, // Enable importing JSON modules
+    "isolatedModules": true, // Ensure that each file is treated as an isolated module
+    "jsx": "react" // Enable JSX support for React
   },
-  "include": ["src"]
+  "include": ["src"] // Include the `src` folder (where your `.tsx` files are)
 }
